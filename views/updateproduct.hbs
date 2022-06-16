@@ -1,0 +1,29 @@
+<form action="/update" method="post">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" id="name" value="{{oldproduct.name}}"
+            placeholder="Product name*">
+    </div>
+
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" name="price" class="form-control" id="price" value="{{oldproduct.price}}"
+            placeholder="Product price*">
+    </div>
+
+    <div class="mb-3">
+        <label for="size" class="form-label">Size</label>
+        <input type="text" name="size" class="form-control" id="size" value="{{oldproduct.size}}"
+            placeholder="Product size*">
+    </div>
+
+    <div class="mb-3">
+        <label for="img" class="form-label">Image</label>
+        <input type="text" name="img" class="form-control" id="img" value="{{oldproduct.img}}"
+            placeholder="Product img*">
+    </div>
+
+    <input type="hidden" name="id" id="id" value="{{oldproduct.id}}">
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

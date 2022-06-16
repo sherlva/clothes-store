@@ -1,0 +1,36 @@
+<h1 class="section_name">Card page</h1>
+
+<div id="card">
+    {{#if card.products.length}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Count</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each card.products}}
+            <tr>
+                <td scope="row">{{name}}</td>
+                <td class="price price_us">{{price}}</td>
+                <td class="count">{{count}}</td>
+                <td>
+                    <a id="{{id}}" href="/card/delete/{{id}}" data-id="{{id}}" class="btn remove-btn"
+                        style="background-color: red;">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+
+        <tr>
+            <td scope="row" class="price_us">{{card.price}}</td>
+        </tr>
+    </table>
+    {{else}}
+    <h2>Card is empty</h2>
+    {{/if}}
+</div>

@@ -1,0 +1,36 @@
+<section class="clothes">
+    <div class="container">
+
+        <div class="row">
+            <h1 class="section_name d-flex justify-content-center">
+                Mens Clothes
+            </h1>
+            {{#if products}}
+            {{#each products}}
+            <div class=" col-4">
+                <div class="card">
+                    <img src="{{img}}" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 style="margin-bottom: 20px;" class="card-title">{{name}}</h5>
+                        <p style="margin: 0;" class="card-text">Price: <strong class="price_us">{{price}}</strong></p>
+                        <p class="card-text">Size: <strong>{{size}}</strong></p>
+                        <div class="card-body-action">
+                            <form action="/card/add" method="post">
+                                <input type="hidden" name="id" id="id" value="{{id}}">
+                                <button type="submit" class="btn btn-primary">Buy</button>
+                            </form>
+                            <a class="open" href="/product/{{id}}">
+                                <img src="https://icones.pro/wp-content/uploads/2021/06/icone-fleche-droite-noir.png"
+                                    alt="open">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <h2>products are empty</h2>
+            {{/if}}
+        </div>
+    </div>
+</section>

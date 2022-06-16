@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="product_view">
+        <div class="product_view_img">
+            <img src={{product.img}} alt={{product.img}}>
+        </div>
+        <div class="product_view_info">
+            <h2 class="product_view_info_title">{{product.name}}</h2>
+            <p class="product_view_info_price">Price: <strong class="price_us">{{product.price}}</strong></p>
+            <p class="product_view_info_size">Size: <strong>{{product.size}}</strong></p>
+        </div>
+        <div class="product_view_action">
+            <a class="btn btn-danger" href="/remove/{{product.id}}" style="background: red;">Delete</a>
+            <a class="btn btn-success" href="/update/{{product.id}}" style="background: green;">Update</a>
+        </div>
+    </div>
+</div>
